@@ -1,4 +1,4 @@
-image: docker
+#image: docker
 #image: docker:dind
 
 stages:
@@ -12,6 +12,7 @@ stages:
 
 
 before_script:
+  - docker info
   - echo $opp | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
 
 
