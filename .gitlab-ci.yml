@@ -1,5 +1,5 @@
-image: docker:stable
-#image: docker:dind
+#image: docker:stable
+image: docker:dind
 
 stages:
   - build
