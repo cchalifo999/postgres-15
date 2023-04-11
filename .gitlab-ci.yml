@@ -5,8 +5,8 @@ stages:
   - build
   
 
-#services:
-# - docker:dind
+services:
+ - docker:dind
  # command: ["--tls=false"]
 
 
