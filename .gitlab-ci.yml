@@ -5,8 +5,7 @@ stages:
   - build
   
 
-services:
- - docker:dind
+
 
 
 before_script:
