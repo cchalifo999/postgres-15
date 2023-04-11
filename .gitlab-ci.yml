@@ -1,12 +1,12 @@
 #image: docker:stable
-image: docker:dind
+#image: docker:dind
 
 stages:
   - build
   
 
-services:
- - docker:dind
+#services:
+# - docker:dind
  # command: ["--tls=false"]
 
 
