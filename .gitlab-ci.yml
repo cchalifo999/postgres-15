@@ -13,7 +13,7 @@ stages:
 
 before_script:
   - docker info
-  - echo $oppp | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+  - echo $opppp | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
 
 
 
