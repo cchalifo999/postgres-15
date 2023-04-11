@@ -1,0 +1,27 @@
+image: docker:stable
+#image: docker:dind
+
+stages:
+  - build
+  
+
+services:
+ - docker:dind
+ # command: ["--tls=false"]
+
+
+
+before_script:
+  - echo $opp | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+
+
+
+Build-postgress_ssl:
+  stage: build
+  
+  script:
+ 
+  - docker build -t $CI_REGISTRY/postgres15:latest .
+  - docker push $CI_REGISTRY/postgres15:latest
+
+
