@@ -13,7 +13,7 @@ stages:
 
 before_script:
   - docker info
-  - echo $op | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
+  - echo $op | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY/$CI_REGISTRY_USER 
 
 
 
@@ -22,6 +22,6 @@ Build-postgress_ssl:
   
   script:
  
-  - docker build -t $CI_REGISTRY/postgres15:latest .
-  - docker push $CI_REGISTRY/postgres15
+  - docker build -t $CI_REGISTRY/$CI_REGISTRY_USER/postgres15:latest .
+  - docker push $CI_REGISTRY/$CI_REGISTRY_USER/postgres15
 
