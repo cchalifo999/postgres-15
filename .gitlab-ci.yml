@@ -24,4 +24,3 @@ Build-postgress_ssl:
  
   - docker build -t $CI_REGISTRY/root/postgres15:latest .
   - docker push $CI_REGISTRY/root/postgres15:latest 
-
