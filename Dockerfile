@@ -4,4 +4,4 @@ RUN mkdir /ssl
 
 COPY ./ssl/ /ssl/ 
 
-RUN chown -R postgres:postgres /ssl
+RUN chown -R 70 /ssl/server.key
