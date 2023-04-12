@@ -1,13 +1,13 @@
-image: docker:stable
+image: docker:20.10.16
 
 
 stages:
   - build
   
 
-#services:
-# - docker:dind
- #  command: ["--tls=false"]
+services:
+  - name: registry.hub.docker.com/library/docker:20.10.16-dind
+    alias: docker
 
 
 
