@@ -4,4 +4,4 @@ FROM postgres:15-alpine
 
 COPY ./ssl/ /var/lib/postgresql/
 
-RUN chown -R 70 /var/lib/postgresql/server.key
+RUN chmod 600 /var/lib/postgresql/server.key
